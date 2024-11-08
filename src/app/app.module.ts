@@ -20,7 +20,7 @@ import { AddLocationModule, LocationTabModule } from '@c8y/ngx-components/locati
 import { LoriotDeviceRegistrationModule } from '@c8y/ngx-components/loriot-device-registration';
 import { OperationsModule } from '@c8y/ngx-components/operations';
 import { LpwanProtocolModule } from '@c8y/ngx-components/protocol-lpwan';
-import { Lwm2mModule } from '@c8y/ngx-components/protocol-lwm2m';
+import { Lwm2mPluginCheckerService } from '@c8y/ngx-components/protocol-lwm2m';
 import { OpcuaProtocolModule } from '@c8y/ngx-components/protocol-opcua';
 import { RegisterDeviceModule } from '@c8y/ngx-components/register-device';
 import { RepositoryModule } from '@c8y/ngx-components/repository';
@@ -73,13 +73,12 @@ import { alarmsDeviceManagementRouteAndNodeConfig } from '@c8y/ngx-components/al
     DeviceProtocolsModule,
     DiagnosticsModule,
     DeviceListModule,
-    Lwm2mModule.forRoot(),
     BookmarksModule,
     LocationTabModule,
     AddLocationModule,
     alarmsDeviceManagementRouteAndNodeConfig()
   ],
-  providers: [trackingFeatureProvider]
+  providers: [trackingFeatureProvider, Lwm2mPluginCheckerService]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {

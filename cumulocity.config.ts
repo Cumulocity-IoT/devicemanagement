@@ -44,8 +44,18 @@ export default {
         description:
           'The Services plugin provides a device tab that lists all services running on a device with their status, name, type and date of the last update.',
         scope: 'self' as any
+      },
+      {
+        name: 'LWM2M plugin',
+        module: 'LWM2Module',
+        path: '@c8y/ngx-components/protocol-lwm2m',
+        description: 'Self scoped LWM2M plugin. Serves Post-operations, configuration and more...',
+        scope: 'self' as any
       }
-    ]
+    ],
+    remotes: {
+      [`lwm2m-ui-plugin@${version.split('.')[0]}-stable`]: ['Lwm2mModuleWrapper']
+    }
   },
   buildTime: {
     federation: [
