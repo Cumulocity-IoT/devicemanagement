@@ -31,7 +31,6 @@ import '@c8y/ng1-modules/device-protocols/cumulocity.json';
 import '@c8y/ng1-modules/device-protocol-lwm2m/cumulocity.json';
 import '@c8y/ng1-modules/device-protocol-opcua-v2/cumulocity.json';
 import '@c8y/ng1-modules/assetTable/cumulocity.json';
-import '@c8y/ng1-modules/dataPointTable/cumulocity.json';
 import '@c8y/ng1-modules/eventList/cumulocity.json';
 import '@c8y/ng1-modules/htmlWidget/cumulocity.json';
 import '@c8y/ng1-modules/scada/cumulocity.json';
