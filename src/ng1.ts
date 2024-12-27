@@ -16,7 +16,6 @@ import '@c8y/ng1-modules/simulators/cumulocity.json';
 import '@c8y/ng1-modules/remoteAccess/cumulocity.json';
 import '@c8y/ng1-modules/deviceActility/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-deviceManagement/cumulocity.json';
-import '@c8y/ng1-modules/devicemanagement-deviceListMap/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-deviceNetwork/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-eventList/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-availability/cumulocity.json';

@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeModule as NgUpgradeModule } from '@angular/upgrade/static';
 import { CoreModule, RouterModule } from '@c8y/ngx-components';
 import { ActilityDeviceRegistrationModule } from '@c8y/ngx-components/actility-device-registration';
+import { alarmsDeviceManagementRouteAndNodeConfig } from '@c8y/ngx-components/alarms/devicemanagement';
 import { AssetsNavigatorModule } from '@c8y/ngx-components/assets-navigator';
 import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-download';
 import { BookmarksModule } from '@c8y/ngx-components/bookmarks';
@@ -12,6 +13,7 @@ import {
   DeviceManagementHomeDashboardModule
 } from '@c8y/ngx-components/context-dashboard';
 import { DeviceListModule } from '@c8y/ngx-components/device-list';
+import { deviceMapFeatureProvider } from '@c8y/ngx-components/device-map';
 import { DeviceProfileModule } from '@c8y/ngx-components/device-profile';
 import { DeviceProtocolsModule } from '@c8y/ngx-components/device-protocols';
 import { DeviceShellModule } from '@c8y/ngx-components/device-shell';
@@ -37,7 +39,6 @@ import {
 } from '@c8y/ngx-components/upgrade';
 import { cockpitWidgets } from '@c8y/ngx-components/widgets/cockpit';
 import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
-import { alarmsDeviceManagementRouteAndNodeConfig } from '@c8y/ngx-components/alarms/devicemanagement';
 
 @NgModule({
   imports: [
@@ -78,7 +79,7 @@ import { alarmsDeviceManagementRouteAndNodeConfig } from '@c8y/ngx-components/al
     AddLocationModule,
     alarmsDeviceManagementRouteAndNodeConfig()
   ],
-  providers: [trackingFeatureProvider, Lwm2mPluginCheckerService]
+  providers: [deviceMapFeatureProvider, trackingFeatureProvider, Lwm2mPluginCheckerService]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
