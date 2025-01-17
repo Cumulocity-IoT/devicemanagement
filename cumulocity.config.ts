@@ -22,14 +22,6 @@ export default {
     upgrade: true,
     exports: [
       {
-        name: 'Advanced software management',
-        module: 'AdvancedSoftwareModule',
-        path: '@c8y/ngx-components/advanced-software-management',
-        description:
-          'Uses the ASM microservice for managing software items instead of inventory API.',
-        scope: 'self' as any
-      },
-      {
         name: 'Replace device plugin',
         module: 'ReplaceDeviceModule',
         path: '@c8y/ngx-components/replace-device',
@@ -54,7 +46,8 @@ export default {
       }
     ],
     remotes: {
-      [`lwm2m-ui-plugin@${version.split('.')[0]}-stable`]: ['Lwm2mModuleWrapper']
+      [`lwm2m-ui-plugin@${version.split('.')[0]}-stable`]: ['Lwm2mModuleWrapper'],
+      ['c8y-asm-ui@latest']: ['AdvancedSoftwareModule']
     }
   },
   buildTime: {
