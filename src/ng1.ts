@@ -13,7 +13,6 @@ import '@c8y/ng1-modules/connectivityV2/cumulocity.json';
 import '@c8y/ng1-modules/smartRestEditor/cumulocity.json';
 import '@c8y/ng1-modules/smartRestEditorUI/cumulocity.json';
 import '@c8y/ng1-modules/simulators/cumulocity.json';
-import '@c8y/ng1-modules/remoteAccess/cumulocity.json';
 import '@c8y/ng1-modules/deviceActility/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-deviceManagement/cumulocity.json';
 import '@c8y/ng1-modules/devicemanagement-deviceNetwork/cumulocity.json';

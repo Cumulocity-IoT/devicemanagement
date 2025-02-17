@@ -27,7 +27,7 @@ export default {
         path: '@c8y/ngx-components/replace-device',
         description:
           'Replace device plugin for enabling the action of replacing a physical device with another one.',
-        scope: 'self' as any
+        scope: 'self'
       },
       {
         name: 'Services plugin',
@@ -35,14 +35,50 @@ export default {
         path: '@c8y/ngx-components/services',
         description:
           'The Services plugin provides a device tab that lists all services running on a device with their status, name, type and date of the last update.',
-        scope: 'self' as any
+        scope: 'self'
       },
       {
         name: 'LWM2M plugin',
         module: 'LWM2Module',
         path: '@c8y/ngx-components/protocol-lwm2m',
         description: 'Self scoped LWM2M plugin. Serves Post-operations, configuration and more...',
-        scope: 'self' as any
+        scope: 'self'
+      },
+      {
+        name: 'Remote access: Configuration list',
+        module: 'remoteAccessConfigurationListProviders',
+        path: '@c8y/ngx-components/remote-access/configurations',
+        description:
+          'Allows to configure remote access on devices and to initiate the remote access connections.',
+        scope: 'self'
+      },
+      {
+        name: 'Remote access: VNC protocol support',
+        module: 'remoteAccessVNCProviders',
+        path: '@c8y/ngx-components/remote-access/vnc',
+        description: 'Adds VNC protocol support to the remote access feature.',
+        scope: 'self'
+      },
+      {
+        name: 'Remote access: SSH protocol support',
+        module: 'remoteAccessSSHProviders',
+        path: '@c8y/ngx-components/remote-access/ssh',
+        description: 'Adds SSH protocol support to the remote access feature.',
+        scope: 'self'
+      },
+      {
+        name: 'Remote access: Telnet protocol support',
+        module: 'remoteAccessTelnetProviders',
+        path: '@c8y/ngx-components/remote-access/telnet',
+        description: 'Adds Telnet protocol support to the remote access feature.',
+        scope: 'self'
+      },
+      {
+        name: 'Remote access: Passthrough protocol support',
+        module: 'remoteAccessPassthroughProviders',
+        path: '@c8y/ngx-components/remote-access/passthrough',
+        description: 'Adds passthrough support to the remote access feature.',
+        scope: 'self'
       }
     ],
     remotes: {
