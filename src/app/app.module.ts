@@ -39,6 +39,7 @@ import {
 } from '@c8y/ngx-components/upgrade';
 import { cockpitWidgets } from '@c8y/ngx-components/widgets/cockpit';
 import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
+import { DeviceProvisionedCertificatesModule } from '@c8y/ngx-components/device-provisioned-certificates';
 
 @NgModule({
   imports: [
@@ -77,6 +78,7 @@ import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-mana
     BookmarksModule,
     LocationTabModule,
     AddLocationModule,
+    DeviceProvisionedCertificatesModule,
     alarmsDeviceManagementRouteAndNodeConfig()
   ],
   providers: [deviceMapFeatureProvider, trackingFeatureProvider, Lwm2mPluginCheckerService]
