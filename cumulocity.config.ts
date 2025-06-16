@@ -1,5 +1,5 @@
 import type { ConfigurationOptions } from '@c8y/devkit';
-import { author, description, version, name } from './package.json';
+import { author, description, version, name, license } from './package.json';
 import { gettext } from '@c8y/ngx-components/gettext';
 
 const defaultDescription = gettext(
@@ -19,6 +19,7 @@ export default {
       "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
     dynamicOptionsUrl: true,
     contextHelp: true,
+    license,
     upgrade: true,
     exports: [
       {
@@ -35,13 +36,6 @@ export default {
         path: '@c8y/ngx-components/services',
         description:
           'The Services plugin provides a device tab that lists all services running on a device with their status, name, type and date of the last update.',
-        scope: 'self'
-      },
-      {
-        name: 'LWM2M plugin',
-        module: 'LWM2Module',
-        path: '@c8y/ngx-components/protocol-lwm2m',
-        description: 'Self scoped LWM2M plugin. Serves Post-operations, configuration and more...',
         scope: 'self'
       },
       {
