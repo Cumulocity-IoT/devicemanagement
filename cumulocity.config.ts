@@ -73,6 +73,13 @@ export default {
         path: '@c8y/ngx-components/remote-access/passthrough',
         description: 'Adds passthrough support to the remote access feature.',
         scope: 'self'
+      },
+      {
+        name: 'Device parameters list',
+        module: 'deviceParametersFeatureProvider',
+        path: '@c8y/ngx-components/device-parameters',
+        description: 'Adds device parameters list tab to the device details view.',
+        scope: 'self'
       }
     ],
     remotes: {
