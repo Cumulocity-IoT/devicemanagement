@@ -39,6 +39,7 @@ import {
 import { cockpitWidgets } from '@c8y/ngx-components/widgets/cockpit';
 import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
 import { DeviceProvisionedCertificatesModule } from '@c8y/ngx-components/device-provisioned-certificates';
+import { datapointGraphWidgetproviders } from '@c8y/ngx-components/widgets/definitions/datapoints-graph';
 
 @NgModule({
   imports: [
@@ -80,7 +81,7 @@ import { DeviceProvisionedCertificatesModule } from '@c8y/ngx-components/device-
     DeviceProvisionedCertificatesModule,
     alarmsDeviceManagementRouteAndNodeConfig()
   ],
-  providers: [deviceMapFeatureProvider, trackingFeatureProvider]
+  providers: [deviceMapFeatureProvider, trackingFeatureProvider, datapointGraphWidgetproviders]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
