@@ -14,8 +14,10 @@ import {
 } from '@c8y/ngx-components/context-dashboard';
 import { DeviceListModule } from '@c8y/ngx-components/device-list';
 import { deviceMapFeatureProvider } from '@c8y/ngx-components/device-map';
+import { deviceParametersFeatureProvider } from '@c8y/ngx-components/device-parameters';
 import { DeviceProfileModule } from '@c8y/ngx-components/device-profile';
 import { DeviceProtocolsModule } from '@c8y/ngx-components/device-protocols';
+import { DeviceProvisionedCertificatesModule } from '@c8y/ngx-components/device-provisioned-certificates';
 import { DeviceShellModule } from '@c8y/ngx-components/device-shell';
 import { DiagnosticsModule } from '@c8y/ngx-components/diagnostics';
 import { AddLocationModule, LocationTabModule } from '@c8y/ngx-components/location';
@@ -37,9 +39,8 @@ import {
   UpgradeModule
 } from '@c8y/ngx-components/upgrade';
 import { cockpitWidgets } from '@c8y/ngx-components/widgets/cockpit';
-import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
-import { DeviceProvisionedCertificatesModule } from '@c8y/ngx-components/device-provisioned-certificates';
 import { datapointGraphWidgetproviders } from '@c8y/ngx-components/widgets/definitions/datapoints-graph';
+import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
 
 @NgModule({
   imports: [
@@ -81,7 +82,12 @@ import { datapointGraphWidgetproviders } from '@c8y/ngx-components/widgets/defin
     DeviceProvisionedCertificatesModule,
     alarmsDeviceManagementRouteAndNodeConfig()
   ],
-  providers: [deviceMapFeatureProvider, trackingFeatureProvider, datapointGraphWidgetproviders]
+  providers: [
+    deviceMapFeatureProvider,
+    trackingFeatureProvider,
+    datapointGraphWidgetproviders,
+    deviceParametersFeatureProvider
+  ]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
