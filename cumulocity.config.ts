@@ -1,6 +1,6 @@
 import type { ConfigurationOptions } from '@c8y/devkit';
-import { author, description, version, name, license } from './package.json';
 import { gettext } from '@c8y/ngx-components/gettext';
+import { author, description, license, name, version } from './package.json';
 
 const defaultDescription = gettext(
   'The Device Management application provides functionalities for managing and monitoring devices and enables you to control and troubleshoot devices remotely.'
@@ -76,8 +76,8 @@ export default {
       },
       {
         name: 'Data point explorer',
-        module: 'DatapointExplorerModule',
-        path: '@c8y/ngx-components/datapoint-explorer',
+        module: 'dataExplorerMeasurementsFeature',
+        path: '@c8y/ngx-components/datapoint-explorer/devicemanagement',
         description: 'Enables visualization of data points',
         scope: 'self'
       },
