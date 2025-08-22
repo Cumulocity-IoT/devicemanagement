@@ -80,13 +80,6 @@ export default {
         path: '@c8y/ngx-components/datapoint-explorer/devicemanagement',
         description: 'Enables visualization of data points',
         scope: 'self'
-      },
-      {
-        name: 'Device parameters list',
-        module: 'deviceParametersFeatureProvider',
-        path: '@c8y/ngx-components/device-parameters',
-        description: 'Adds device parameters list tab to the device details view.',
-        scope: 'self'
       }
     ],
     remotes: {
