@@ -80,6 +80,14 @@ export default {
         path: '@c8y/ngx-components/datapoint-explorer/devicemanagement',
         description: 'Enables visualization of data points',
         scope: 'self'
+      },
+      {
+        name: 'Dashboard manager',
+        module: 'dashboardManagerFeatureProvider',
+        path: '@c8y/ngx-components/dashboard-manager/devicemanagement',
+        description:
+          'Adds Dashboard manager as Management feature and allows to manage type dashboards.',
+        scope: 'self'
       }
     ],
     remotes: {
