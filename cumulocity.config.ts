@@ -15,6 +15,8 @@ export default {
     globalTitle: 'Cumulocity',
     rightDrawer: true,
     breadcrumbs: false,
+    sensorAppOneLink: 'http://onelink.to/pca6qe',
+    sensorPhone: true,
     contentSecurityPolicy:
       "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
     dynamicOptionsUrl: true,
@@ -87,6 +89,13 @@ export default {
         path: '@c8y/ngx-components/dashboard-manager/devicemanagement',
         description:
           'Adds Dashboard manager as Management feature and allows to manage type dashboards.',
+        scope: 'self'
+      },
+      {
+        name: 'Sensor phone',
+        module: 'SensorPhoneModule',
+        path: '@c8y/ngx-components/sensor-phone',
+        description: 'Dialogs to connect smartphone to platform.',
         scope: 'self'
       }
     ],
