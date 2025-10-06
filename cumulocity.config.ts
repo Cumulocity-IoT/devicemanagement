@@ -102,6 +102,9 @@ export default {
     remotes: {
       [`lwm2m-ui-plugin@${version.split('.')[0]}-stable`]: ['Lwm2mModuleWrapper'],
       ['c8y-asm-ui@latest']: ['AdvancedSoftwareModule'],
+      [`device-parameters-ui-plugin@${version.split('.')[0]}-stable`]: [
+        'deviceParametersFeatureProvider'
+      ],
       [`analyticsrules@${version.split('.')[0]}-stable`]: ['AnalyticsInstanceModule']
     }
   },
