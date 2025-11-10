@@ -37,9 +37,7 @@ import {
   UPGRADE_ROUTES,
   UpgradeModule
 } from '@c8y/ngx-components/upgrade';
-import { cockpitWidgets } from '@c8y/ngx-components/widgets/cockpit';
-import { datapointGraphWidgetproviders } from '@c8y/ngx-components/widgets/definitions/datapoints-graph';
-import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-management';
+import { GlobalContextModule } from '@c8y/ngx-components/global-context';
 
 @NgModule({
   imports: [
@@ -64,8 +62,6 @@ import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-mana
     SubAssetsModule,
     ChildDevicesModule,
     DeviceManagementHomeDashboardModule,
-    deviceManagementWidgets(),
-    cockpitWidgets(['cockpit.welcome.widget', 'Cockpit Welcome']),
     DeviceInfoDashboardModule,
     RegisterDeviceModule,
     SigfoxDeviceRegistrationModule,
@@ -79,9 +75,10 @@ import { deviceManagementWidgets } from '@c8y/ngx-components/widgets/device-mana
     LocationTabModule,
     AddLocationModule,
     DeviceProvisionedCertificatesModule,
-    alarmsDeviceManagementRouteAndNodeConfig()
+    alarmsDeviceManagementRouteAndNodeConfig(),
+    GlobalContextModule
   ],
-  providers: [deviceMapFeatureProvider, trackingFeatureProvider, datapointGraphWidgetproviders]
+  providers: [deviceMapFeatureProvider, trackingFeatureProvider]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {

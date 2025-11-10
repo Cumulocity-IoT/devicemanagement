@@ -1,6 +1,7 @@
 import type { ConfigurationOptions } from '@c8y/devkit';
 import { gettext } from '@c8y/ngx-components/gettext';
 import { author, description, license, name, version } from './package.json';
+import { deviceManagementWidgetsExports } from '@c8y/ngx-components/widgets/device-management-exports';
 
 const defaultDescription = gettext(
   'The Device Management application provides functionalities for managing and monitoring devices and enables you to control and troubleshoot devices remotely.'
@@ -24,6 +25,7 @@ export default {
     license,
     upgrade: true,
     exports: [
+      ...deviceManagementWidgetsExports,
       {
         name: 'Replace device plugin',
         module: 'ReplaceDeviceModule',

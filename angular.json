@@ -24,7 +24,6 @@
         "build": {
           "builder": "@c8y/devkit:build",
           "options": {
-            "outputPath": "dist/devicemanagement",
             "polyfills": [
               "zone.js"
             ],
@@ -40,10 +39,10 @@
               "@c8y/style/main.less",
               "src/styles.less"
             ],
-            "scripts": [],
             "aot": false,
             "main": "src/main.ts",
             "buildOptimizer": false,
+            "outputPath": "dist/devicemanagement",
             "allowedCommonJsDependencies": [
               "regenerator-runtime/runtime",
               "@cordobo/qrcode",
@@ -92,7 +91,7 @@
           "builder": "@c8y/devkit:extract-i18n"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
             "polyfills": [
               "zone.js",
@@ -109,8 +108,7 @@
             "styles": [
               "@c8y/style/main.less",
               "src/styles.less"
-            ],
-            "scripts": []
+            ]
           }
         },
         "deploy": {
