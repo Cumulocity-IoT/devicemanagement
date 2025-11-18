@@ -94,6 +94,20 @@ export default {
         scope: 'self'
       },
       {
+        name: 'Dashboards: Add device dashboards',
+        module: 'addDeviceContextDashboardFeatureProvider',
+        path: '@c8y/ngx-components/context-dashboard/devicemanagement',
+        description: 'Allows to add dashboards on device level.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: View device dashboards',
+        module: 'viewDeviceContextDashboardFeatureProvider',
+        path: '@c8y/ngx-components/context-dashboard/devicemanagement',
+        description: 'Allows to view dashboards on device level.',
+        scope: 'self'
+      },
+      {
         name: 'Sensor phone',
         module: 'SensorPhoneModule',
         path: '@c8y/ngx-components/sensor-phone',
