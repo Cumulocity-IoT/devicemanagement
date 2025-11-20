@@ -19,11 +19,19 @@ export default {
     sensorAppOneLink: 'http://onelink.to/pca6qe',
     sensorPhone: true,
     contentSecurityPolicy:
-      "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
+      "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data: blob:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
     dynamicOptionsUrl: true,
     contextHelp: true,
     license,
     upgrade: true,
+    importMap: {
+      lit: '@c8y/html-repo/lit',
+      leaflet: '@c8y/html-repo/leaflet',
+      echarts: '@c8y/html-repo/echarts',
+      angular: '@c8y/html-repo/angular',
+      styles: '@c8y/html-repo/styles',
+      fetch: '@c8y/html-repo/fetch'
+    },
     exports: [
       ...deviceManagementWidgetsExports,
       {
