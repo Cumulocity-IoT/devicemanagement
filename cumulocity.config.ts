@@ -35,91 +35,95 @@ export default {
     exports: [
       ...deviceManagementWidgetsExports,
       {
-        name: 'Replace device plugin',
+        name: gettext('Replace device plugin'),
         module: 'ReplaceDeviceModule',
         path: '@c8y/ngx-components/replace-device',
-        description:
-          'Replace device plugin for enabling the action of replacing a physical device with another one.',
+        description: gettext(
+          'Replace device plugin for enabling the action of replacing a physical device with another one.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Services plugin',
+        name: gettext('Services plugin'),
         module: 'ServicesModule',
         path: '@c8y/ngx-components/services',
-        description:
-          'The Services plugin provides a device tab that lists all services running on a device with their status, name, type and date of the last update.',
+        description: gettext(
+          'The Services plugin provides a device tab that lists all services running on a device with their status, name, type and date of the last update.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Remote access: Configuration list',
+        name: gettext('Remote access: Configuration list'),
         module: 'remoteAccessConfigurationListProviders',
         path: '@c8y/ngx-components/remote-access/configurations',
-        description:
-          'Allows to configure remote access on devices and to initiate the remote access connections.',
+        description: gettext(
+          'Allows to configure remote access on devices and to initiate the remote access connections.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Remote access: VNC protocol support',
+        name: gettext('Remote access: VNC protocol support'),
         module: 'remoteAccessVNCProviders',
         path: '@c8y/ngx-components/remote-access/vnc',
-        description: 'Adds VNC protocol support to the remote access feature.',
+        description: gettext('Adds VNC protocol support to the remote access feature.'),
         scope: 'self'
       },
       {
-        name: 'Remote access: SSH protocol support',
+        name: gettext('Remote access: SSH protocol support'),
         module: 'remoteAccessSSHProviders',
         path: '@c8y/ngx-components/remote-access/ssh',
-        description: 'Adds SSH protocol support to the remote access feature.',
+        description: gettext('Adds SSH protocol support to the remote access feature.'),
         scope: 'self'
       },
       {
-        name: 'Remote access: Telnet protocol support',
+        name: gettext('Remote access: Telnet protocol support'),
         module: 'remoteAccessTelnetProviders',
         path: '@c8y/ngx-components/remote-access/telnet',
-        description: 'Adds Telnet protocol support to the remote access feature.',
+        description: gettext('Adds Telnet protocol support to the remote access feature.'),
         scope: 'self'
       },
       {
-        name: 'Remote access: Passthrough protocol support',
+        name: gettext('Remote access: Passthrough protocol support'),
         module: 'remoteAccessPassthroughProviders',
         path: '@c8y/ngx-components/remote-access/passthrough',
-        description: 'Adds passthrough support to the remote access feature.',
+        description: gettext('Adds passthrough support to the remote access feature.'),
         scope: 'self'
       },
       {
-        name: 'Data point explorer',
+        name: gettext('Data point explorer'),
         module: 'dataExplorerMeasurementsFeature',
         path: '@c8y/ngx-components/datapoint-explorer/devicemanagement',
-        description: 'Enables visualization of data points',
+        description: gettext('Enables visualization of data points'),
         scope: 'self'
       },
       {
-        name: 'Dashboard manager',
+        name: gettext('Dashboard manager'),
         module: 'dashboardManagerFeatureProvider',
         path: '@c8y/ngx-components/dashboard-manager/devicemanagement',
-        description:
-          'Adds Dashboard manager as Management feature and allows to manage type dashboards.',
+        description: gettext(
+          'Adds Dashboard manager as Management feature and allows to manage type dashboards.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Dashboards: Add device dashboards',
+        name: gettext('Dashboards: Add device dashboards'),
         module: 'addDeviceContextDashboardFeatureProvider',
         path: '@c8y/ngx-components/context-dashboard/devicemanagement',
-        description: 'Allows to add dashboards on device level.',
+        description: gettext('Allows to add dashboards on device level.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: View device dashboards',
+        name: gettext('Dashboards: View device dashboards'),
         module: 'viewDeviceContextDashboardFeatureProvider',
         path: '@c8y/ngx-components/context-dashboard/devicemanagement',
-        description: 'Allows to view dashboards on device level.',
+        description: gettext('Allows to view dashboards on device level.'),
         scope: 'self'
       },
       {
-        name: 'Sensor phone',
+        name: gettext('Sensor phone'),
         module: 'SensorPhoneModule',
         path: '@c8y/ngx-components/sensor-phone',
-        description: 'Dialogs to connect smartphone to platform.',
+        description: gettext('Dialogs to connect smartphone to platform.'),
         scope: 'self'
       }
     ],
