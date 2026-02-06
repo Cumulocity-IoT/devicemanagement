@@ -138,6 +138,7 @@ export default {
   },
   buildTime: {
     federation: [
+      'jquery',
       '@angular/animations',
       '@angular/cdk',
       '@angular/common',
