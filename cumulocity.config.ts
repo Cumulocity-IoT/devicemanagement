@@ -53,6 +53,15 @@ export default {
         scope: 'self'
       },
       {
+        name: gettext('Device enrolment plugin'),
+        module: 'deviceEnrolmentProviders',
+        path: '@c8y/ngx-components/device-enrolment',
+        description: gettext(
+          'Device enrolment modal and quick link integration to connect devices using thin-edge.io.'
+        ),
+        scope: 'self'
+      },
+      {
         name: gettext('Remote access: Configuration list'),
         module: 'remoteAccessConfigurationListProviders',
         path: '@c8y/ngx-components/remote-access/configurations',
