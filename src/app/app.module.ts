@@ -4,6 +4,7 @@ import { UpgradeModule as NgUpgradeModule } from '@angular/upgrade/static';
 import { CoreModule, RouterModule } from '@c8y/ngx-components';
 import { ActilityDeviceRegistrationModule } from '@c8y/ngx-components/actility-device-registration';
 import { alarmsDeviceManagementRouteAndNodeConfig } from '@c8y/ngx-components/alarms/devicemanagement';
+import { eventsDeviceManagementProviders } from '@c8y/ngx-components/events/devicemanagement';
 import { AssetsNavigatorModule } from '@c8y/ngx-components/assets-navigator';
 import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-download';
 import { BookmarksModule } from '@c8y/ngx-components/bookmarks';
@@ -78,7 +79,7 @@ import { GlobalContextModule } from '@c8y/ngx-components/global-context';
     alarmsDeviceManagementRouteAndNodeConfig(),
     GlobalContextModule
   ],
-  providers: [deviceMapFeatureProvider, trackingFeatureProvider]
+  providers: [deviceMapFeatureProvider, trackingFeatureProvider, ...eventsDeviceManagementProviders]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
