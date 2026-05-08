@@ -53,11 +53,11 @@ export default {
         scope: 'self'
       },
       {
-        name: gettext('Device enrolment plugin'),
+        name: gettext('Device enrollment plugin'),
         module: 'deviceEnrolmentProviders',
         path: '@c8y/ngx-components/device-enrolment',
         description: gettext(
-          'Device enrolment modal and quick link integration to connect devices using thin-edge.io.'
+          'Device enrollment modal and quick link integration to connect devices using thin-edge.io.'
         ),
         scope: 'self'
       },
