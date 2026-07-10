@@ -15,5 +15,5 @@ if (__MODE__ === 'production') {
 export function bootstrap(metadata: BootstrapMetaData) {
   return platformBrowserDynamic(provideBootstrapMetadata(metadata))
     .bootstrapModule(AppModule)
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 }

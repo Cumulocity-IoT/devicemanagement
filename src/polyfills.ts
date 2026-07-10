@@ -32,7 +32,7 @@
   'mouseover',
   'mouseout',
   'mouseenter',
-  'mouseleave'
+  'mouseleave',
 ]; // disable patch specified eventNames
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.

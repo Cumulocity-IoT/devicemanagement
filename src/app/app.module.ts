@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeModule as NgUpgradeModule } from '@angular/upgrade/static';
 import { CoreModule, RouterModule } from '@c8y/ngx-components';
@@ -11,7 +11,7 @@ import { BookmarksModule } from '@c8y/ngx-components/bookmarks';
 import { ChildDevicesModule } from '@c8y/ngx-components/child-devices';
 import {
   DeviceInfoDashboardModule,
-  DeviceManagementHomeDashboardModule
+  DeviceManagementHomeDashboardModule,
 } from '@c8y/ngx-components/context-dashboard';
 import { DeviceListModule } from '@c8y/ngx-components/device-list';
 import { deviceMapFeatureProvider } from '@c8y/ngx-components/device-map';
@@ -36,7 +36,7 @@ import {
   DashboardUpgradeModule,
   HybridAppModule,
   UPGRADE_ROUTES,
-  UpgradeModule
+  UpgradeModule,
 } from '@c8y/ngx-components/upgrade';
 import { GlobalContextModule } from '@c8y/ngx-components/global-context';
 
@@ -48,7 +48,7 @@ import { GlobalContextModule } from '@c8y/ngx-components/global-context';
     RouterModule.forRoot([...UPGRADE_ROUTES]),
     CoreModule.forRoot(),
     AssetsNavigatorModule.config({
-      smartGroups: true
+      smartGroups: true,
     }),
     OperationsModule,
     OpcuaProtocolModule,
@@ -77,9 +77,14 @@ import { GlobalContextModule } from '@c8y/ngx-components/global-context';
     AddLocationModule,
     DeviceProvisionedCertificatesModule,
     alarmsDeviceManagementRouteAndNodeConfig(),
-    GlobalContextModule
+    GlobalContextModule,
   ],
-  providers: [deviceMapFeatureProvider, trackingFeatureProvider, ...eventsDeviceManagementProviders]
+  providers: [
+    provideZoneChangeDetection(),
+    deviceMapFeatureProvider,
+    trackingFeatureProvider,
+    ...eventsDeviceManagementProviders,
+  ],
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
